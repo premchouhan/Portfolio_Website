@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    /* background-image: url(./img/block-1-shadow.png); */
+    background-size: cover;
+}
+
+body {
+    font-size: 12px;
+    font-family: system-ui;
+    /* background-image: url("./img/content-img.png"); */
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+/* img{
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+h1 {
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    font-family: 'Cabin Sketch', sans-serif;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgba(21, 137, 160, 0.474);
+}
+
+/* <-- CONTACT SECTION --> */
+
+h2 {
+    width: fit-content;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 30px;
+    color: rgb(44, 39, 39);
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h2.red {
+    width: fit-content;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 28px;
+    color: rgb(220, 20, 20);
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Cabin Sketch', cursive;
+}
+h2.blue {
+    width: fit-content;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 28px;
+    color: rgb(51, 0, 123);
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Cabin Sketch', cursive;
+}
+h2.green {
+    width: fit-content;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 26px;
+    color: rgb(0, 187, 78);
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Cabin Sketch', cursive;
+}
+.pera{
+    font-size: 12;
+}
+.contact ul {
+    width: fit-content;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 3px;
+    border-width: 0.5px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    list-style: none;
+}
+
+.objective ul {
+    width: fit-content;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px;
+    border-width: 0.5px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    list-style: none;
+}
+
+
+.contact {
+    margin-left: 90px;
+}
+
+.contact img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 1003px;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+
+}
+
+.contact:hover .shape {
+    bottom: 40px;
+}
+
+.contact:hover .prem {
+    left: 45%;
+}
+
+.address ul {
+    width: fit-content;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px;
+    border-width: 0.5px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10px;
+    list-style: none;
+}
+
+caption {
+    width: fit-content;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: rgb(44, 39, 39);
+    font-weight: bold;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 10px;
+
+}
+
+th {
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.hobbies {
+    margin-left: 180px;
+}
+
+.skill {
+    margin-left: 80px;
+}
+
+ul.a {
+    list-style-type: square;
+}
+
+/* nav{
+font-size: medium;
+}
+nav li{
+    background-color: rgb(215, 200, 200);
+    font-size: 20px;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+  color: yellowgreen;
+}
+nav li a{
+    text-decoration: none;
+   
+    color: rgb(16, 14, 16);
+} */
