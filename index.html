@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
-    <head>
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <body>
-    <div class="hero">
-        <nav>
-            <img src="./img/ar.png" class="logo">
-            <ul>
+    <div class="hero" >
+        <nav style="display: flex; justify-content: space-between;">
+            <img src="./img/ar.png" class="logo" alt="Logo">
+           <a id="menu"  href="javascript: " style="text-decoration: none; color: black;">
+               <i onclick="toggleMenu()" class="fa fa-bars" aria-hidden="true"></i>
+           </a>
+            <ul id="ul">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">PORTFOLIO</a></li>
@@ -25,23 +26,84 @@
             </ul>
         </nav>
     </div>
-    <div class="details">
-    <div style="margin-bottom: 20px;">
-        <marquee direction="left" >This is my official Portfolio website to shows all
-            Details and work experience web development</marquee>
-        </div>
-        <h1>I,m Prem <span>Chouhan</span></h1>
-       
-        <p>This is my official Portfolio website to shows all <br> Details and work experience web development</p>
-        <a href="resume/Resume.pdf"> <p1 title="click here to Download">Download CV</p1></a>
+   <div id="mobile_menu">
+    <!-- <div style="display: flex; justify-content: center; align-items: center; text-align:center; "> -->
+        <div style="display: flex; justify-content: center; ">
+        <ul id="" style=" font-size: small; text-decoration: none; color: black; font-weight: bold; list-style: none; display: flex; gap: 12px; padding: 14px;">
+            <li style="margin-top: 15px;"><a href="#">HOME</a></li>
+            <li style="margin-top: 15px;"><a href="#">ABOUT</a></li>
+            <li style="margin-top: 15px;"><a href="#">PORTFOLIO</a></li>
+            <li style="margin-top: 15px;"><a href="#">SERVICE</a></li>
+            <li style="margin-top: 15px;"><a href="#">HIRE ME</a></li>
+        </ul>
     </div>
-
-    <div class="image">
-        <img src="./img/content-img.png" class="shape">
-        <img src="./img/a21.png" class="prem">
-    </div>
+   </div>
 
     
+    <div class="details">
+        <div style="margin-bottom: 20px;">
+            <marquee direction="left">
+                This is my official Portfolio website to show all details and work experience in web development.
+            </marquee>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h1>I, Prem <span>Chouhan</span></h1>
+                <p>
+                    This is my official Portfolio website to show all <br>
+                    details and work experience in web development.
+                </p>
+                <a href="resume/Resume.pdf" id="downloadCV" title="click here to Download">Download CV</a>
+            </div>
+            <script>
+                // Disable default download and require password
+                document.getElementById('downloadCV').addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default download action
+                    const password = prompt('Please enter the name of my loved One? :');
+                    if (password === 'eshika') {
+                        // Redirect to the CV file if the password is correct
+                        window.location.href = 'resume/Resume.pdf';
+                    } else {
+                        alert('Incorrect password. Please try again.');
+                    }
+                });
+            </script>
+            <div class="images">
+                <img src="./img/content-img.png" alt="Shape" class="shape">
+                <img src="./img/a21.png" alt="Prem" class="prem">
+            </div>
+        </div>
+    </div>
+    <script>
+    
+    function toggleMenu() {
+        var ul = document.getElementById('mobile_menu');
+        if (ul.style.display === 'none') {
+            ul.style.display = 'block';
+        } else {
+            ul.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      // F12 Key
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && ["I", "J", "C","U"].includes(e.key)) {
+        e.preventDefault();
+      }
+      // Ctrl+U (View Source)
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
+    });
+  </script>
 
 </body>
 
