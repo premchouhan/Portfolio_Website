@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <div class="hero" >
+    <div class="hero">
         <nav style="display: flex; justify-content: space-between;">
             <img src="./img/ar.png" class="logo" alt="Logo">
-           <a id="menu"  href="javascript: " style="text-decoration: none; color: black;">
-               <i onclick="toggleMenu()" class="fa fa-bars" aria-hidden="true"></i>
-           </a>
+            <a id="menu" href="javascript:void(0);" style="text-decoration: none; color: black;">
+                <i onclick="toggleMenu()" class="fa fa-bars" aria-hidden="true"></i>
+            </a>
             <ul id="ul">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -26,85 +26,152 @@
             </ul>
         </nav>
     </div>
-   <div id="mobile_menu">
-    <!-- <div style="display: flex; justify-content: center; align-items: center; text-align:center; "> -->
-        <div style="display: flex; justify-content: center; ">
-        <ul id="" style=" font-size: small; text-decoration: none; color: black; font-weight: bold; list-style: none; display: flex; gap: 12px; padding: 14px;">
-            <li style="margin-top: 15px;"><a href="#">HOME</a></li>
-            <li style="margin-top: 15px;"><a href="#">ABOUT</a></li>
-            <li style="margin-top: 15px;"><a href="#">PORTFOLIO</a></li>
-            <li style="margin-top: 15px;"><a href="#">SERVICE</a></li>
-            <li style="margin-top: 15px;"><a href="#">HIRE ME</a></li>
-        </ul>
-    </div>
-   </div>
 
-    
+    <div id="mobile_menu">
+        <div style="display: flex; justify-content: center;">
+            <ul style="font-size: small; text-decoration: none; color: black; font-weight: bold; list-style: none; display: flex; gap: 12px; padding: 14px;">
+                <li style="margin-top: 15px;"><a href="#">HOME</a></li>
+                <li style="margin-top: 15px;"><a href="#">ABOUT</a></li>
+                <li style="margin-top: 15px;"><a href="#">PORTFOLIO</a></li>
+                <li style="margin-top: 15px;"><a href="#">SERVICE</a></li>
+                <li style="margin-top: 15px;"><a href="#">HIRE ME</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="details">
         <div style="margin-bottom: 20px;">
             <marquee direction="left">
-                This is my official Portfolio website to show all details and work experience in web development.
+                This is my official portfolio website to showcase all details and work experience in web development.
             </marquee>
         </div>
-        <div class="content">
-            <div class="text">
-                <h1>I, Prem <span>Chouhan</span></h1>
-                <p>
-                    This is my official Portfolio website to show all <br>
-                    details and work experience in web development.
-                </p>
-                <a href="resume/Resume.pdf" id="downloadCV" title="click here to Download">Download CV</a>
+
+      
+                    <div class="content">
+                        <div class="text">
+                            <h1>I, Prem <span>Chouhan</span></h1>
+                            <p>
+                                This is my official Portfolio website to show all <br>
+                                details and work experience in web development.
+                            </p>
+                            <a href="resume/Resume.pdf" id="downloadCV1" title="click here to Download">My Story !!</a>
+                            <div class="search-section">
+                                <input type="text" id="searchInput" placeholder="Search your first name">
+                                <button onclick="searchName()">Search</button>
+                            </div>
+                            
+                        </div>
+                        <div class="images">
+                            <img src="./img/content-img.png" alt="Shape" class="shape">
+                            <img src="./img/a21.png" alt="Prem" class="prem">
+                        </div>
+                        <script>
+                            // Disable default download and require password
+                            document.getElementById('downloadCV1').addEventListener('click', function (event) {
+                                event.preventDefault(); // Prevent the default download action
+                                const password = prompt('Please enter the name of my loved One? :');
+                                if (password === 'e') {
+                                    // Redirect to the CV file if the password is correct
+                                    window.location.href = 'resume/Resume.pdf';
+                                } else {
+                                    alert('Incorrect password. Please try again.');
+                                }
+                            });
+                        </script>
+            <!-- Search Section -->
+      
+    </div>   
+</div>
             </div>
-            <script>
+            
+            <!-- <script>
                 // Disable default download and require password
-                document.getElementById('downloadCV').addEventListener('click', function (event) {
+                document.getElementById('downloadCV1').addEventListener('click', function (event) {
                     event.preventDefault(); // Prevent the default download action
                     const password = prompt('Please enter the name of my loved One? :');
-                    if (password === 'eshika') {
+                    if (!enteredPassword || enteredPassword.trim() === "") {
+                // If the prompt is canceled or empty, do nothing
+                return;
+            }
+                    if (password === 'e') {
                         // Redirect to the CV file if the password is correct
-                        window.location.href = 'resume/Resume.pdf';
+                         window.location.href = "resume/Resume.pdf";
                     } else {
                         alert('Incorrect password. Please try again.');
                     }
                 });
-            </script>
-            <div class="images">
-                <img src="./img/content-img.png" alt="Shape" class="shape">
-                <img src="./img/a21.png" alt="Prem" class="prem">
-            </div>
-        </div>
-    </div>
+            </script>       -->
+
     <script>
-    
-    function toggleMenu() {
-        var ul = document.getElementById('mobile_menu');
-        if (ul.style.display === 'none') {
-            ul.style.display = 'block';
-        } else {
-            ul.style.display = 'none';
+        // Toggle the menu display
+        function toggleMenu() {
+            const ul = document.getElementById('mobile_menu');
+            ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
         }
-    }
+ // Prevent Right Click and Developer Tools Access
+         document.addEventListener('contextmenu', function(e) {
+             e.preventDefault();
+         });
 
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
+         document.addEventListener('keydown', function(e) {
+             if (e.key === "F12") {
+                 e.preventDefault();
+             }
+             if (e.ctrlKey && e.shiftKey && ["I", "J", "C", "U"].includes(e.key)) {
+                 e.preventDefault();
+             }
+             if (e.ctrlKey && e.key === "u") {
+                 e.preventDefault();
+             }
+         });
+        // Password verification for downloading the CV
+        const passwords = {
+            "Eshika": "2657476", "Sribas": "2345678", "Aman": "3456789", "Sonali": "4567890",
+            "Bhabhya": "5678901", "Sweta": "6789012", "Nirjan": "7890123", "Pragati": "8901234",
+            "Kabir": "9012345", "Lokesh": "0123456"
+        };
 
-    document.addEventListener('keydown', function(e) {
-      // F12 Key
-      if (e.key === "F12") {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && ["I", "J", "C","U"].includes(e.key)) {
-        e.preventDefault();
-      }
-      // Ctrl+U (View Source)
-      if (e.ctrlKey && e.key === "u") {
-        e.preventDefault();
-      }
-    });
-  </script>
+        function requestPassword(enteredName) {
+            const enteredPassword = prompt(`${enteredName} please enter your Employee ID :`);
 
+            if (!enteredPassword || enteredPassword.trim() === "") {
+                // If the prompt is canceled or empty, do nothing
+                return;
+            }
+
+            // Validate the password
+            if (passwords[enteredName] && enteredPassword === passwords[enteredName]) {
+                const pdfFileName = `${enteredName.charAt(0).toUpperCase() + enteredName.slice(1)}.pdf`;
+                alert(`Happy New Year 2025 ${enteredName}! This greeting card is for you dear!`);
+                window.location.href = `./files/${pdfFileName}`; // Trigger the download
+            } else {
+                alert("Incorrect password or name. Please try again.");
+            }
+        }
+
+        // Search functionality
+        function searchName() {
+            const firstNames = [
+                "Eshika", "Sribas", "Aman", "Sonali", "Bhabhya",
+                "Sweta", "Nirjan", "Pragati", "Kabir", "Lokesh"
+            ];
+
+            const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
+
+            if (!searchValue) {
+                alert("Please write your first name.");
+                return;
+            }
+
+            if (firstNames.some(name => name.toLowerCase() === searchValue)) {
+                const nameToUse = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
+                alert(`Happy New Year, ${nameToUse}!`);
+                requestPassword(nameToUse);
+            } else {
+                alert("Sorry, your name is not in the list. Please try with your first name.");
+            }
+        }
+    </script>
 </body>
 
 </html>

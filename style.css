@@ -116,6 +116,43 @@ span {
 .images img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
+.content {
+    display: flex;
+    justify-content: space-between; /* Separate "My Story !!" and the search bar */
+    align-items: center; /* Vertically align the content */
+    gap: 20px; /* Add spacing between items */
+}
+
+.text {
+    flex: 1; /* Allow "My Story !!" to take up space */
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+#searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
 
 /* Responsive styles */
 
@@ -160,6 +197,12 @@ span {
 
 /* For mobile */
 @media (max-width: 480px) {
+    .search-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Space between input and button */
+    }
     nav {
          /* Stack logo and menu vertically */
         align-items: center;
@@ -187,6 +230,7 @@ span {
         width: 100px;
     }
 }
+
 #menu{
     display: none;
 }
@@ -211,3 +255,5 @@ span {
     text-decoration: none;
     color: black;
   }
+
+  
