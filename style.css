@@ -53,7 +53,7 @@ nav ul li a:hover {
 
 /* Details Section */
 .details {
-    margin: 5%;
+    margin: 3%;
     text-align: left;
 }
 
@@ -104,16 +104,37 @@ span {
     flex: 1;
     max-width: 35%; /* Limits the width of the image section */
 }
-
+.profileimages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    max-width: 35%; /* Limits the width of the image section */
+}
+.profileimages img{
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
 .images img {
-    height: 150px;
-    width: 150px;
+    padding-top: 50px;
+    height: 300px;
+    width: 300px;
+    margin-left: 50px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .images img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+.profileimages img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 .content {
@@ -225,10 +246,21 @@ button:hover {
         padding: 8px 14px;
     }
 
-    .images img {
-        height: 100px;
-        width: 100px;
-    }
+
+        .images img {
+             padding-top: 50px;
+            padding-right: 50px; 
+             height: 300px; 
+         width: 300px; 
+            margin-left: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+}
+.prem1{
+    display: none;
 }
 
 #menu{
@@ -240,8 +272,11 @@ button:hover {
 @media screen and (max-width: 992px) {
     #menu{
         display: block;
-    }
 
+    }
+.prem1{
+    display: block;
+}
    
     #ul{
            display: none;
