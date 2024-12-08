@@ -31,12 +31,14 @@ nav ul li a:hover{
     color: red;
 }
 .details{
+    /* margin-bottom: 200px; */
     margin-left: 8%;
     margin-top: 5vh;
 }
 .details p{
     color: #555;
     line-height: 20px;
+    
 }
 .details a{
     text-decoration: none;
@@ -47,11 +49,12 @@ nav ul li a:hover{
     display: inline-block;
     margin: 30px 0;
     border-radius: 5px;
+    
 }
 .details h1{ 
     font-size: 51px;
     color: black;
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 span{
     color: orange;
@@ -60,8 +63,8 @@ span{
 width: 45%;
 height: 80%;
 position: absolute;
-bottom: 0;
-right: 100px;
+bottom: 100px;
+right: 10px;
 }
 .image img{
     height: 220px;width: 220px;
